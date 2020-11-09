@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BeverageType.cs" />
     <Compile Include="CoffeeMachine.cs" />
+    <Compile Include="Drink.cs" />
+    <Compile Include="FilterCoffeeMaker.cs" />
+    <Compile Include="Gui.cs" />
     <Compile Include="HotDrinkMaker.cs" />
-    <Compile Include="IChooseProduct.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

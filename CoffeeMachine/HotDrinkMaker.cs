@@ -6,44 +6,38 @@
 
         public double WaterContainer
         {
-            get { return waterContainer; }
-            set { waterContainer = value; }
+            get => waterContainer;
+            set => waterContainer = value;
         }
 
         protected double productContainer;
 
         public double ProductContainer
         {
-            get { return productContainer; }
-            set { productContainer = value; }
+            get => productContainer;
+            set => productContainer = value;
         }
 
-        protected int numberOfCups;
+        //protected int numberOfCups;
 
-        public int NumberOfCups
+        //public int NumberOfCups
+        //{
+        //    get => numberOfCups;
+        //    set => numberOfCups = value;
+        //}
+
+     
+
+        //public abstract string FillWaterContainerToMax();
+
+        //public abstract string FillProductContainerToMax();
+
+        //public abstract string NumberOfCupsToBeMade(double waterAmount);
+
+
+        protected HotDrinkMaker(double waterContainer, double productContainer)
         {
-            get { return numberOfCups; }
-            set { numberOfCups = value; }
-        }
-
-        protected bool startButton;
-
-        public bool StartButton
-        {
-            get { return startButton; }
-            set { startButton = value; }
-        }
-
-        public abstract double FillWaterContainer();
-
-        public abstract double FillProductContainer();
-
-        public abstract string GetNumberOfCups();
-
-
-        protected HotDrinkMaker(double waterContainer, double productContainer, int numberOfCups)
-        {
-            this.numberOfCups = numberOfCups;
+            //this.numberOfCups = numberOfCups;
             this.productContainer = productContainer;
             this.waterContainer = waterContainer;
         }

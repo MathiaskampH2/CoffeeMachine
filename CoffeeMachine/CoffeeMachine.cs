@@ -1,43 +1,86 @@
-﻿using System.Security.Cryptography;
+﻿
+using System.Text;
 
 namespace CoffeeMachine
 {
-    public  class CoffeeMachine :HotDrinkMaker, IChooseProduct
+    public  class CoffeeMachine :HotDrinkMaker
     {
-        public CoffeeMachine(double waterContainer, double productContainer, int numberOfCups) : base(waterContainer, productContainer, numberOfCups)
+        public CoffeeMachine(double waterContainer, double productContainer) : base(waterContainer, productContainer)
         {
 
         }
 
-        public string[] Products()
-        {
-            string [] product = new string[]{"Whole Beans", "Ground Beans", "Capsules"};
+        private string waterContainerMax;
 
-            return product;
+        public string WaterContainerMax
+        {
+            get { return waterContainerMax; }
+            set { waterContainerMax = value; }
         }
 
-        public override double FillWaterContainer()
+        private string productContainerMax;
+
+        public string ProductContainerMax
         {
-            return waterContainer = 1;
+            get { return productContainerMax; }
+            set { productContainerMax = value; }
+        }
+
+        private string numberOfCupsMax;
+
+        public string NumberOfCupsMax
+        {
+            get { return numberOfCupsMax; }
+            set { numberOfCupsMax = value; }
         }
 
 
-        public override double FillProductContainer()
-        {
-            throw new System.NotImplementedException();
-        }
 
-        public override string GetNumberOfCups()
-        {
-            double fillWaterContainer = FillWaterContainer();
-            string numberOfCups = null;
 
-            if (fillWaterContainer == 1)
+
+        //public override string FillWaterContainerToMax()
+        //{
+        //    waterContainerMax = "1000 Milliliters";
+
+        //    return WaterContainerMax;
+        //}
+
+        //public override string FillProductContainerToMax()
+        //{
+        //    productContainerMax = "500 Gram";
+        //    return ProductContainerMax;
+        //}
+
+        //public override string NumberOfCupsToBeMade(double waterAmount)
+        //{
+        //    numberOfCupsMax = GetMaxWater() / waterAmount
+        //}
+
+        //public string GetMaxWater()
+        //{
+        //    return FillWaterContainerToMax().Substring(0,4);
+        //}
+
+        //public string GetMaxProduct()
+        //{
+        //    return FillProductContainerToMax().Substring(0, 3);
+        //}
+
+
+        public Drink MakeDrink(int UserChoise)
+        {
+            switch (UserChoise)
             {
-                numberOfCups = "Number of cups to be made is 5";
+                case 1:
+                    return new FilterCoffeeMaker(200, 100, 93);
+
+                default:
+                    return null;
+                    
             }
 
-            return numberOfCups;
+            
         }
+
     }
 }
