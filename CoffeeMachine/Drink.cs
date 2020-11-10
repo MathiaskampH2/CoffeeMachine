@@ -12,12 +12,12 @@ namespace CoffeeMachine
             set { waterAmount = value; }
         }
 
-        protected double productAmount;
+        protected string product;
 
-        public double ProductAmount
+        public string Product
         {
-            get { return productAmount; }
-            set { productAmount = value; }
+            get { return product; }
+            set { product = value; }
         }
 
         protected double temperature;
@@ -28,9 +28,9 @@ namespace CoffeeMachine
             set { temperature = value; }
         }
 
-        protected Drink(double water,  double product, double temperature)
+        protected Drink(double water,  string product, double temperature)
         {
-            this.productAmount = product;
+            this.product = product;
             this.waterAmount = water;
             this.temperature = temperature;
         }
@@ -38,9 +38,9 @@ namespace CoffeeMachine
         public override string ToString()
         {
             return
-                "Water amount :" + waterAmount +" Ml"+ "\n"
-                + "Product amount :" + productAmount + " Gram" + "\n"
-                + "temperature of product : " + temperature + " Degrees"+ "\n";
+                "Water amount :" + waterAmount + " Ml" + "\n"
+                + "Product type :" + product  + "\n"
+                + "temperature of product : " + temperature + " Degrees" + "\n";
         }
     }
 }

@@ -2,8 +2,10 @@
 {
     public class FilterCoffeeMaker:Drink
     {
-        public FilterCoffeeMaker(double water, double product, double temperature) : base(water, product, temperature)
+        public FilterCoffeeMaker(double water, string product, double temperature) : base(water, product, temperature)
         {
+            water = 200;
+            temperature = 93;
         }
     }
 }

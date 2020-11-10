@@ -1,37 +1,37 @@
-﻿namespace CoffeeMachine
+﻿using System;
+
+namespace CoffeeMachine
 {
     public abstract class HotDrinkMaker
     {
-        protected double waterContainer;
+        protected string waterContainer;
 
-        public double WaterContainer
+        public string WaterContainer
         {
             get => waterContainer;
             set => waterContainer = value;
         }
 
-        protected double productContainer;
+        protected string productContainer;
 
-        public double ProductContainer
+        public string ProductContainer
         {
             get => productContainer;
             set => productContainer = value;
         }
 
-        protected int numberOfCups;
-
-
-        //public abstract string FillWaterContainerToMax();
-
-        //public abstract string FillProductContainerToMax();
-
-        //public abstract string NumberOfCupsToBeMade(double waterAmount);
-
-
-        protected HotDrinkMaker(double waterContainer, double productContainer)
+        protected HotDrinkMaker(string waterContainer, string productContainer)
         {
             this.productContainer = productContainer;
             this.waterContainer = waterContainer;
+        }
+
+        public override string ToString()
+        {
+            return
+                "Water container level :" + waterContainer + "\n" 
+                +"Product container level :" + productContainer + "\n";
+
         }
     }
 }

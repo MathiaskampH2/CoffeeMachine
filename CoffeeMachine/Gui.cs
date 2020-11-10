@@ -21,10 +21,5 @@ namespace CoffeeMachine
             Console.WriteLine("2. Ground Beans");
             Console.WriteLine("3. Capsules");
         }
-
-        public void PrintHowManyCups()
-        {
-            Console.WriteLine("how many cups do you want to make ? :");
-        }
     }
 }
