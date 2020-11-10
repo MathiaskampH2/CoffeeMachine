@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using CoffeeMachine;
 
 namespace CoffeeMachine
+
 {
     class Program
     {
@@ -15,8 +16,10 @@ namespace CoffeeMachine
             Gui gui = new Gui();
 
             gui.PrintMachineChoices();
-            
+
             CoffeeMachine coffeeMachine = new CoffeeMachine(1000,500);
+
+            BrewingUnit brewingUnit = new BrewingUnit();
 
             bool start = false;
 
@@ -35,7 +38,7 @@ namespace CoffeeMachine
                         Console.Clear();
                         Console.WriteLine("information of your cup of filter Coffee :");
                         Console.WriteLine("it is brewed on :");
-                        Console.WriteLine(coffeeMachine.MakeDrink(userChooseMachine).ToString());
+                        Console.WriteLine(brewingUnit.MakeDrink(userChooseMachine).ToString());
 
                         break;
                 }

@@ -18,15 +18,8 @@
             set => productContainer = value;
         }
 
-        //protected int numberOfCups;
+        protected int numberOfCups;
 
-        //public int NumberOfCups
-        //{
-        //    get => numberOfCups;
-        //    set => numberOfCups = value;
-        //}
-
-     
 
         //public abstract string FillWaterContainerToMax();
 
@@ -37,10 +30,8 @@
 
         protected HotDrinkMaker(double waterContainer, double productContainer)
         {
-            //this.numberOfCups = numberOfCups;
             this.productContainer = productContainer;
             this.waterContainer = waterContainer;
         }
-
     }
 }

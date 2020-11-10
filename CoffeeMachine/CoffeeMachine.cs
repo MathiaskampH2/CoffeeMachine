@@ -1,18 +1,21 @@
 ﻿
+using System.Data;
 using System.Text;
 
 namespace CoffeeMachine
 {
     public  class CoffeeMachine :HotDrinkMaker
     {
+
+
         public CoffeeMachine(double waterContainer, double productContainer) : base(waterContainer, productContainer)
         {
 
         }
 
-        private string waterContainerMax;
+        private double waterContainerMax;
 
-        public string WaterContainerMax
+        public double WaterContainerMax
         {
             get { return waterContainerMax; }
             set { waterContainerMax = value; }
@@ -35,7 +38,10 @@ namespace CoffeeMachine
         }
 
 
-
+        public double GetMaxWaterLevel()
+        {
+            return waterContainerMax;
+        }
 
 
         //public override string FillWaterContainerToMax()
@@ -66,21 +72,6 @@ namespace CoffeeMachine
         //    return FillProductContainerToMax().Substring(0, 3);
         //}
 
-
-        public Drink MakeDrink(int UserChoise)
-        {
-            switch (UserChoise)
-            {
-                case 1:
-                    return new FilterCoffeeMaker(200, 100, 93);
-
-                default:
-                    return null;
-                    
-            }
-
-            
-        }
 
     }
 }
