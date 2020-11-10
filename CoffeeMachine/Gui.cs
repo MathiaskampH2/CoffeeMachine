@@ -4,6 +4,10 @@ using System.Runtime.Remoting.Services;
 
 namespace CoffeeMachine
 {
+    /// <summary>
+    /// Gui class
+    /// has 2 methods that prints out a gui menu
+    /// </summary>
     public class Gui
     {
         public void PrintMachineChoices()

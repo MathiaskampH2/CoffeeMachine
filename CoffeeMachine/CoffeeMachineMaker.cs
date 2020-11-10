@@ -2,6 +2,12 @@
 
 namespace CoffeeMachine
 {
+    /// <summary>
+    /// CoffeeMachineMaker
+    /// The responsible of this class is to make an Object of CoffeeMachine class
+    /// It has some methods to get the waterContainerLevel and ProductLevel from the user
+    /// In order to make the CoffeeMachine "Prefilled" when its returned to the user
+    /// </summary>
     public class CoffeeMachineMaker
     {
         public double GetWaterContainerLevelFromUser(double userinput)

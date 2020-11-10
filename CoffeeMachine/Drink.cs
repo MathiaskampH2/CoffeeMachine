@@ -2,6 +2,11 @@
 
 namespace CoffeeMachine
 {
+    /// <summary>
+    /// Drink Class
+    /// This class responsible is making me able to make Drink objects
+    /// It has an override of ToString method.
+    /// </summary>
     public abstract class Drink
     {
         protected double waterAmount;

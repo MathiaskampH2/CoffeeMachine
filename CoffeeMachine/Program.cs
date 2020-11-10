@@ -33,9 +33,12 @@ namespace CoffeeMachine
                         double userFillWater = Double.Parse(Console.ReadLine());
                         Console.WriteLine("How much product do you want to put on in the coffee machine : ");
                         double userFillProduct = Double.Parse(Console.ReadLine());
-                        HotDrinkMaker coffeeMachineDrinkMaker = new CoffeeMachineMaker().CreateHotDrinkMaker(userChooseMachine, userFillWater, userFillProduct);
+                        HotDrinkMaker coffeeMachineDrinkMaker =
+                            new CoffeeMachineMaker().CreateHotDrinkMaker(userChooseMachine, userFillWater,
+                                userFillProduct);
                         Console.Clear();
-                        Console.WriteLine("Here is your coffee machine \n "+ "it is filled with " + coffeeMachineDrinkMaker.ToString());
+                        Console.WriteLine("Here is your coffee machine \n " + "it is filled with " +
+                                          coffeeMachineDrinkMaker.ToString());
                         Thread.Sleep(5000);
                         Console.Clear();
                         gui.PrintProductUi();
@@ -44,13 +47,14 @@ namespace CoffeeMachine
                         Console.WriteLine("Brewing.....................");
                         Thread.Sleep(3000);
                         Console.Clear();
-                        Console.WriteLine("here is your coffee \n" + "It is brewed on :" +brewingUnit.MakeDrink(userChooseMachine, userChooseProductForCoffee).ToString());
+                        Console.WriteLine("here is your coffee \n" + "It is brewed on :" +
+                                          brewingUnit.MakeDrink(userChooseMachine, userChooseProductForCoffee)
+                                              .ToString());
                         Thread.Sleep(3000);
                         Console.Clear();
                         break;
-
-                        
                 }
+
                 start = true;
             }
         }

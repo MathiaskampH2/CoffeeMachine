@@ -2,6 +2,12 @@
 
 namespace CoffeeMachine
 {
+    /// <summary>
+    /// HotDrinkMaker class
+    /// This class is responsible of beeing a "Hot drink Machine"
+    /// In this case i use it to make a CoffeMachine object.
+    /// 
+    /// </summary>
     public abstract class HotDrinkMaker
     {
         protected string waterContainer;
