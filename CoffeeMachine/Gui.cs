@@ -39,6 +39,13 @@ namespace CoffeeMachine
             Console.WriteLine("What kind of drink would you like :");
             Console.WriteLine("1. Coffee");
             Console.WriteLine("2. Tea");
+            Console.WriteLine("3. Espresso");
+        }
+
+        public void PrintEspressoUi()
+        {
+            Console.WriteLine("1. House Blend");
+            Console.WriteLine("2. Arabica Blend");
         }
     }
 }

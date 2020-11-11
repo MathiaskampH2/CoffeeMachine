@@ -68,6 +68,16 @@ namespace CoffeeMachine
                                 break;
 
                             case 3:
+                                Console.Clear();
+                                gui.PrintEspressoUi();
+                                int UserChooseEspresso = int.Parse(Console.ReadLine());
+                                Console.Clear();
+                                Console.WriteLine("Brewing.....................");
+                                Thread.Sleep(3000);
+                                Console.Clear();
+                                Console.WriteLine("here is your Espresso \n" + "It is brewed on :\n" + brewingUnit.MakeDrink(userChooseDrink, UserChooseEspresso).ToString());
+                                Thread.Sleep(3000);
+                                Console.Clear();
                                 break;
                         }
 

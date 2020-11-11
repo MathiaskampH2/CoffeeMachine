@@ -66,13 +66,38 @@ namespace CoffeeMachine
             return saveUserInput;
         }
 
+        public string GetEspressoFromUser(int userInput)
+        {
+            string saveUserInput = null;
 
-      
+            switch (userInput)
+            {
+
+                case 1:
+                    saveUserInput = "House Blend";
+
+
+                    break;
+
+                case 2:
+                    saveUserInput = "Arabica Blend";
+                    break;
+
+                default:
+                    return "enter valid number";
+            }
+
+            return saveUserInput;
+        }
+
+
+
         public Drink MakeDrink(int userChoseDrink, int userChooseProduct)
 
         {
             string userChosenCoffee = GetCoffeeFromUser(userChooseProduct);
             string userChooseTea = GetTeaFromUser(userChooseProduct);
+            string userChooseEspresso = GetEspressoFromUser(userChooseProduct);
             switch (userChoseDrink)
             {
                 case 1:
@@ -80,6 +105,9 @@ namespace CoffeeMachine
 
                 case 2:
                     return new Tea(name: "Tea", water:250, userChooseTea, temperature:93);
+
+                case 3:
+                    return new Espresso("Espresso", water:100,userChooseEspresso,temperature:93);
                     
                 default:
                     return null;
