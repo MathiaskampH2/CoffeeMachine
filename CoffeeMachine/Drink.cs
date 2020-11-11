@@ -9,6 +9,14 @@ namespace CoffeeMachine
     /// </summary>
     public abstract class Drink
     {
+        protected string name;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
         protected double waterAmount;
 
         public double WaterAmount
@@ -33,12 +41,15 @@ namespace CoffeeMachine
             set { temperature = value; }
         }
 
-        protected Drink(double water,  string product, double temperature)
+        protected Drink(string name, double water,  string product, double temperature)
         {
+            this.name = name;
             this.product = product;
             this.waterAmount = water;
             this.temperature = temperature;
         }
+
+        
 
         public override string ToString()
         {

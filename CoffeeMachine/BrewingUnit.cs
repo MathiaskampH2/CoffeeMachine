@@ -35,12 +35,12 @@ namespace CoffeeMachine
         public Drink MakeDrink(int userChoseDrink, int userChooseProduct)
 
         {
-            string userChoosenProduct = GetProductFromUser(userChooseProduct);
+            string userChosenProduct = GetProductFromUser(userChooseProduct);
             switch (userChoseDrink)
             {
                 case 1:
-                    return new FilterCoffeeMaker(FIlterCoffee, 200, userChoosenProduct, 93);
-
+                    return new FilterCoffee("Filter Coffee", 200,userChosenProduct, 93);
+                    
                 default:
                     return null;
             }

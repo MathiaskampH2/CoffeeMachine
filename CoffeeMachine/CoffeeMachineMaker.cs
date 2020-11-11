@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics.Eventing.Reader;
+using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Messaging;
 
 namespace CoffeeMachine
@@ -26,60 +27,18 @@ namespace CoffeeMachine
             return validateUserInput;
         }
 
-        public bool ValidateWaterContainerLevelFromUser(double userinput)
+
+
+
+            public HotDrinkMaker CreateHotDrinkMaker(int userinput,double GetWaterFromUser, double GetProductFromUser)
         {
-            double validateUserInput = GetWaterContainerLevelFromUser(userinput);
-
-            if (validateUserInput < 1200)
-            {
-                return true;
-            }
-            else if (validateUserInput > 1200)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        public bool ValidateProductLevelFromUser(double userinput)
-        {
-            double validateUserInput = GetProductLevelFromUser(userinput);
-
-            if (validateUserInput < 500)
-            {
-                return true;
-            }
-            else if (validateUserInput > 1200)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        public double ValidateWaterSucess(bool waterValidate)
-        {
-            waterValidate = ValidateWaterContainerLevelFromUser();
-            if (waterValidate = true)
-            {
-                return
-            }
-
-
-        }
-
-
-
-        public HotDrinkMaker CreateHotDrinkMaker(int userinput,double GetWaterFromUser, double GetProductFromUser)
-        {
-            string fillWater = ValidateWaterContainerLevelFromUser(GetWaterFromUser);
-            string fillProduct = ValidateProductLevelFromUser(GetProductFromUser);
+            //double fillWater = ValidateWaterContainerLevelFromUser(GetWaterFromUser);
+            //double fillProduct = ValidateProductLevelFromUser(GetProductFromUser);
 
             switch (userinput)
             {
                 case 1:
-                    return new CoffeeMachine(fillWater, fillProduct);
+                    return new CoffeeMachine(GetWaterFromUser, GetProductFromUser);
 
                 default:
                     return null;

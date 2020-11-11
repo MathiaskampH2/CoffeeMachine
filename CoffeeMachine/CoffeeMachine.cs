@@ -8,7 +8,7 @@
     /// </summary>
     public class CoffeeMachine :HotDrinkMaker
     {
-        public CoffeeMachine(string waterContainer, string productContainer) : base(waterContainer, productContainer)
+        public CoffeeMachine(double waterContainer, double productContainer) : base(waterContainer, productContainer)
         {
         }
     }

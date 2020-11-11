@@ -10,23 +10,23 @@ namespace CoffeeMachine
     /// </summary>
     public abstract class HotDrinkMaker
     {
-        protected string waterContainer;
+        protected double waterContainer;
 
-        public string WaterContainer
+        public double WaterContainer
         {
             get => waterContainer;
             set => waterContainer = value;
         }
 
-        protected string productContainer;
+        protected double productContainer;
 
-        public string ProductContainer
+        public double ProductContainer
         {
             get => productContainer;
             set => productContainer = value;
         }
 
-        protected HotDrinkMaker(string waterContainer, string productContainer)
+        protected HotDrinkMaker(double waterContainer, double productContainer)
         {
             this.productContainer = productContainer;
             this.waterContainer = waterContainer;
