@@ -13,29 +13,11 @@ namespace CoffeeMachine
     /// </summary>
     public class CoffeeMachineMaker
     {
-        public double GetWaterContainerLevelFromUser(double userinput)
+
+        public HotDrinkMaker CreateCoffeeMachine(int userInput,double GetWaterFromUser)
         {
-            double validateUserInput = userinput;
 
-            return validateUserInput;
-        }
-
-        public double GetProductLevelFromUser(double userinput)
-        {
-            double validateUserInput = userinput;
-
-            return validateUserInput;
-        }
-
-
-
-
-            public HotDrinkMaker CreateHotDrinkMaker(int userinput,double GetWaterFromUser)
-        {
-            //double fillWater = ValidateWaterContainerLevelFromUser(GetWaterFromUser);
-            //double fillProduct = ValidateProductLevelFromUser(GetProductFromUser);
-
-            switch (userinput)
+            switch (userInput)
             {
                 case 1:
                     return new CoffeeMachine(GetWaterFromUser);
