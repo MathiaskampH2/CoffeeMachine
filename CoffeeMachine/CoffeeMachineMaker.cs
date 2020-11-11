@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
+using System.Runtime.Remoting.Messaging;
 
 namespace CoffeeMachine
 {
@@ -24,37 +26,50 @@ namespace CoffeeMachine
             return validateUserInput;
         }
 
-        public string ValidateWaterContainerLevelFromUser(double userinput)
+        public bool ValidateWaterContainerLevelFromUser(double userinput)
         {
             double validateUserInput = GetWaterContainerLevelFromUser(userinput);
 
             if (validateUserInput < 1200)
             {
-                return validateUserInput.ToString();
+                return true;
             }
             else if (validateUserInput > 1200)
             {
-                return "Water level is too high";
+                return false;
             }
 
-            return validateUserInput.ToString();
+            return true;
         }
 
-        public string ValidateProductLevelFromUser(double userinput)
+        public bool ValidateProductLevelFromUser(double userinput)
         {
             double validateUserInput = GetProductLevelFromUser(userinput);
 
             if (validateUserInput < 500)
             {
-                return validateUserInput.ToString();
+                return true;
             }
             else if (validateUserInput > 1200)
             {
-                return "product level is too high";
+                return false;
             }
 
-            return validateUserInput.ToString();
+            return true;
         }
+
+        public double ValidateWaterSucess(bool waterValidate)
+        {
+            waterValidate = ValidateWaterContainerLevelFromUser();
+            if (waterValidate = true)
+            {
+                return
+            }
+
+
+        }
+
+
 
         public HotDrinkMaker CreateHotDrinkMaker(int userinput,double GetWaterFromUser, double GetProductFromUser)
         {
