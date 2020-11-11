@@ -54,7 +54,8 @@ namespace CoffeeMachine
         public override string ToString()
         {
             return
-                "Water amount :" + waterAmount + " Ml" + "\n"
+                "type of coffee : " + name + "\n"
+                + "Water amount :" + waterAmount + " Ml" + "\n"
                 + "Product type :" + product  + "\n"
                 + "temperature of product : " + temperature + " Degrees" + "\n";
         }

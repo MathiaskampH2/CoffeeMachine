@@ -30,7 +30,7 @@ namespace CoffeeMachine
 
 
 
-            public HotDrinkMaker CreateHotDrinkMaker(int userinput,double GetWaterFromUser, double GetProductFromUser)
+            public HotDrinkMaker CreateHotDrinkMaker(int userinput,double GetWaterFromUser)
         {
             //double fillWater = ValidateWaterContainerLevelFromUser(GetWaterFromUser);
             //double fillProduct = ValidateProductLevelFromUser(GetProductFromUser);
@@ -38,7 +38,7 @@ namespace CoffeeMachine
             switch (userinput)
             {
                 case 1:
-                    return new CoffeeMachine(GetWaterFromUser, GetProductFromUser);
+                    return new CoffeeMachine(GetWaterFromUser);
 
                 default:
                     return null;

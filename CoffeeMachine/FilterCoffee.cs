@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace CoffeeMachine
 {
@@ -10,12 +11,13 @@ namespace CoffeeMachine
     /// </summary>
     public class FilterCoffee : Drink
     {
-
         public FilterCoffee(string name, double water, string product, double temperature) : base(name, water, product, temperature)
         {
-            water = 200;
-            temperature = 93;
+            this.waterAmount = 200;
+            this.temperature = 93;
+            this.Name = "Filter Coffee";
         }
-        
+
+       
     }
 }
