@@ -18,25 +18,16 @@ namespace CoffeeMachine
             set => waterContainer = value;
         }
 
-        protected double productContainer;
 
-        public double ProductContainer
+        protected HotDrinkMaker(double waterContainer)
         {
-            get => productContainer;
-            set => productContainer = value;
-        }
-
-        protected HotDrinkMaker(double waterContainer, double productContainer)
-        {
-            this.productContainer = productContainer;
             this.waterContainer = waterContainer;
         }
 
         public override string ToString()
         {
             return
-                "Water container level :" + waterContainer + "\n" 
-                +"Product container level :" + productContainer + "\n";
+                "Water container level :" + waterContainer + "\n";
 
         }
     }

@@ -9,22 +9,22 @@ namespace CoffeeMachine
     /// </summary>
     public class BrewingUnit
     {
-        public string GetProductFromUser(int userinput)
+        public string GetCoffeeFromUser(int userInput)
 
         {
             string saveUserInput = null;
 
-            switch (userinput)
+            switch (userInput)
 
             {
                 case 1:
-                    saveUserInput = "Whole Beans";
+                    saveUserInput = "BKI";
 
 
                     break;
 
                 case 2:
-                    saveUserInput = "Ground Beans";
+                    saveUserInput = "Peter Larsen";
                     break;
             }
 
@@ -35,11 +35,11 @@ namespace CoffeeMachine
         public Drink MakeDrink(int userChoseDrink, int userChooseProduct)
 
         {
-            string userChosenProduct = GetProductFromUser(userChooseProduct);
+            string userChosenCoffee = GetCoffeeFromUser(userChooseProduct);
             switch (userChoseDrink)
             {
                 case 1:
-                    return new FilterCoffee("Filter Coffee", 200,userChosenProduct, 93);
+                    return new FilterCoffee("Filter Coffee", water:200,userChosenCoffee, temperature:93);
                     
                 default:
                     return null;

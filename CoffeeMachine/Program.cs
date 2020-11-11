@@ -31,14 +31,12 @@ namespace CoffeeMachine
                         Console.WriteLine("You have chosen Coffee Machine ");
                         Console.WriteLine("How much water do you want to put in the coffee machine : ");
                         double userFillWater = Double.Parse(Console.ReadLine());
-                        Console.WriteLine("How much product do you want to put on in the coffee machine : ");
-                        double userFillProduct = Double.Parse(Console.ReadLine());
-                        HotDrinkMaker coffeeMachineDrinkMaker = new CoffeeMachineMaker().CreateHotDrinkMaker(userChooseMachine, userFillWater, userFillProduct);
+                        HotDrinkMaker coffeeMachineDrinkMaker = new CoffeeMachineMaker().CreateHotDrinkMaker(userChooseMachine, userFillWater);
                         Console.Clear();
                         Console.WriteLine("Here is your coffee machine \n " + "it is filled with " + coffeeMachineDrinkMaker.ToString());
                         Thread.Sleep(5000);
                         Console.Clear();
-                        gui.PrintProductUi();
+                        gui.PrintCoffeeUi();
                         int userChooseProductForCoffee = int.Parse(Console.ReadLine());
                         Console.Clear();
                         Console.WriteLine("Brewing.....................");

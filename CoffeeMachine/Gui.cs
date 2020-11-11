@@ -18,12 +18,11 @@ namespace CoffeeMachine
 
             Console.WriteLine("1. Coffee machine :");
         }
-        public void PrintProductUi()
+        public void PrintCoffeeUi()
         {
-            Console.WriteLine("Please choose what type of product you are using");
-            Console.WriteLine("1. Whole Beans");
-            Console.WriteLine("2. Ground Beans");
-            Console.WriteLine("3. Capsules");
+            Console.WriteLine("Please choose what kind of coffee do you want :");
+            Console.WriteLine("1. BKI");
+            Console.WriteLine("2. Peter Larsen");
         }
     }
 }
